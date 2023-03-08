@@ -23,7 +23,7 @@ def decode(inf, outf):
         textblockOffset = struct.unpack("Q", di[HEADER_OFFSETTEXT:HEADER_OFFSETTEXT+8])[0]
         textblockSize = struct.unpack("Q", di[HEADER_SIZEOFTEXT:HEADER_SIZEOFTEXT+8])[0]
 
-        print('format: (' + str(di[0:HEADER_FILECODESIZE].decode("utf-16le")) + ')')
+        print('format: (' + str(di[0:HEADER_FILECODESIZE].decode("ascii")) + ')')
         print('ENTRIES: ' + str(numEntries))
         print('HEADER SIZE: ' + str(headerSize))
         print('DICTIONARY SIZE: ' + str(dictSize))
